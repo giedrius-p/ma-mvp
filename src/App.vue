@@ -10,11 +10,13 @@
           <div class="search-input">
             <input type="text"
                    placeholder="Search here people or pages"
+                   v-model="searchText"
+                   v-on:keyup="searchResultShown=true"
                    v-on:click="searchResultShown=!searchResultShown">
             <div class="search-icon"></div>
           </div>
           <div class="search-results-wrapper" v-if="searchResultShown">
-            <div class="search-result" v-for="searchResult in searchResults">
+            <div class="search-result" v-for="searchResult in filteredSearchResults">
               <div class="result-image"
                    :style="{ backgroundImage: `url('${searchResult.logoURL}')` }"></div>
               <div>
@@ -25,10 +27,11 @@
           </div>
       </div>
       <div class="user-profile">
-        <div class="user-profile-image"></div>
+        <div class="user-profile-image"
+             :style="{ backgroundImage: `url('${loggedInUser.imageURL}')` }"></div>
         <div>
-          <div class="user-name">Louisa Johnson</div>
-          <div class="token-count">100 MOM</div>
+          <div class="user-name">{{loggedInUser.name}}</div>
+          <div class="token-count">{{loggedInUser.tokenCount}} MOM</div>
         </div>
       </div>
     </div>
@@ -56,19 +59,33 @@
     data () {
       return {
         searchResultShown: false,
+        searchText: '',
         searchResults: [{
           logoURL: 'http://www.woodsandday.com.au/wp-content/uploads/2016/11/Female-Side-comb-O-neck-512.png',
-          name: 'Name Surname',
+          name: 'Roxanna Giffard',
           description: 'Description'
         }, {
           logoURL: 'http://www.woodsandday.com.au/wp-content/uploads/2016/11/Female-Side-comb-O-neck-512.png',
-          name: 'Name Surname',
+          name: 'Christina Taylor',
           description: 'Description'
         }, {
           logoURL: 'http://www.woodsandday.com.au/wp-content/uploads/2016/11/Female-Side-comb-O-neck-512.png',
-          name: 'Name Surname',
+          name: 'Mya Dane',
           description: 'Description'
-        }]
+        }],
+        loggedInUser: {
+          name: 'Julia North',
+          imageURL: 'http://www.woodsandday.com.au/wp-content/uploads/2016/11/Female-Side-comb-O-neck-512.png',
+          tokenCount: 100
+        }
+      }
+    },
+    computed: {
+      filteredSearchResults () {
+        if (this.searchText) {
+          return this.searchResults.filter(result => result.name.toLowerCase().includes(this.searchText.toLowerCase()))
+        }
+        return this.searchResults
       }
     }
   }
@@ -125,7 +142,6 @@
         margin-right: 10px;
         background-size: cover;
         background-color: white;
-        background-image: url('https://vignette.wikia.nocookie.net/littlemix/images/9/92/Louisajohnson.jpg/revision/latest?cb=20170521173235');
       }
 
       .user-name {
@@ -149,7 +165,7 @@
     box-shadow: 5px 5px 25px 0 rgba(46,61,73,.2);
 
     a {
-      padding: 17.5px;
+      padding: 17.5px 22.5px;
       display: block;
       transition: all .3s ease;
 
@@ -160,8 +176,8 @@
 
     .sidebar-icon {
       background-size: cover;
-      width: 40px;
-      height: 40px;
+      width: 30px;
+      height: 30px;
     }
 
     .congress-icon {
