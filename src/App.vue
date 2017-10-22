@@ -9,7 +9,7 @@
       <div class="search-input-wrapper">
           <div class="search-input">
             <input type="text"
-                   placeholder="Search here people or pages"
+                   placeholder="Search here people or pages..."
                    v-model="searchText"
                    v-on:keyup="searchResultShown=true"
                    v-on:click="searchResultShown=!searchResultShown">

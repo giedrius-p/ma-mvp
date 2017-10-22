@@ -25,7 +25,7 @@
         <div class="post-body">
           {{post.body}}
         </div>
-        <div class="post-actions">
+        <div class="post-footer">
           <div class="post-type">
             {{post.typeText}}
           </div>
@@ -33,7 +33,10 @@
             <div class="heart-icon"></div>
             <div>{{post.reputationCount}}</div>
           </div>
-
+        </div>
+        <div class="post-actions">
+          <div class="action-icon add-heart-icon"></div>
+          <div class="action-icon add-comment-icon"></div>
         </div>
       </article>
     </div>
@@ -151,6 +154,7 @@
   }
 
   .feed-post {
+    position: relative;
     display: flex;
     flex-direction: column;
     background-color: #fff;
@@ -221,7 +225,7 @@
     flex: 1;
   }
 
-  .post-actions {
+  .post-footer {
     padding: 10px 0 0;
     border-top: 1px solid #e6ecf5;
     min-height: 30px;
@@ -234,10 +238,44 @@
     }
 
     .heart-icon {
-      background-image: url('https://cdn4.iconfinder.com/data/icons/evil-icons-user-interface/64/heart-24.png');
+      background-image: url('https://cdn4.iconfinder.com/data/icons/small-n-flat/24/heart-24.png');
       width: 24px;
       height: 24px;
       margin-right: 5px;
+    }
+  }
+
+  .post-actions {
+    position: absolute;
+    top: 120px;
+    right: -17px;
+
+    .action-icon {
+      height: 34px;
+      width: 34px;
+      margin-bottom: 6px;
+      border-radius: 100%;
+      cursor: pointer;
+      transition: all .3s ease;
+      background-color: #888da8;
+      background-size: 68%;
+
+      &:hover {
+        background-color: #ff5e3a;
+        transform: scale(1.2);
+      }
+    }
+
+    .add-heart-icon {
+      background-image: url('../assets/white-heart.png');
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+
+    .add-comment-icon {
+      background-image: url('../assets/white-comment.png');
+      background-repeat: no-repeat;
+      background-position: center center;
     }
   }
 </style>
