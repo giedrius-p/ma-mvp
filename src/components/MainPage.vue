@@ -26,7 +26,14 @@
           {{post.body}}
         </div>
         <div class="post-actions">
-          {{post.typeText}}
+          <div class="post-type">
+            {{post.typeText}}
+          </div>
+          <div class="post-reputation">
+            <div class="heart-icon"></div>
+            <div>{{post.reputationCount}}</div>
+          </div>
+
         </div>
       </article>
     </div>
@@ -58,28 +65,32 @@
           type: 'COURSE',
           typeText: 'Course',
           imageURL: 'https://cdn.makeawebsitehub.com/wp-content/uploads/2016/04/social_media.jpg',
-          logoURL: 'http://www.woodsandday.com.au/wp-content/uploads/2016/11/Female-Side-comb-O-neck-512.png'
+          logoURL: 'http://www.woodsandday.com.au/wp-content/uploads/2016/11/Female-Side-comb-O-neck-512.png',
+          reputationCount: 1126
         }, {
           header: 'Sales Strategies: Mastering the Selling Process',
           body: 'This course will explore both Business to Business (B2B) and Business to Consumer (B2C) selling and entrepreneurship issues and concepts. You will explore frameworks that define and clarify the knowledge, skill and discipline to be successful in selling. ',
           type: 'COURSE',
           typeText: 'Course',
           imageURL: 'http://www.jobsite.co.uk/worklife/files/2016/01/sales-project-management-750x400.jpg',
-          logoURL: 'http://www.woodsandday.com.au/wp-content/uploads/2016/11/Female-Side-comb-O-neck-512.png'
+          logoURL: 'http://www.woodsandday.com.au/wp-content/uploads/2016/11/Female-Side-comb-O-neck-512.png',
+          reputationCount: 10
         }, {
           header: 'Liuti Store - Summer collection sale',
           body: 'Don\'t miss it. Up to 50% less.',
           type: 'MARKETPLACE',
           typeText: 'Marketplace',
           imageURL: 'https://i.imgur.com/vYXUYOr.jpg',
-          logoURL: 'http://www.woodsandday.com.au/wp-content/uploads/2016/11/Female-Side-comb-O-neck-512.png'
+          logoURL: 'http://www.woodsandday.com.au/wp-content/uploads/2016/11/Female-Side-comb-O-neck-512.png',
+          reputationCount: 236
         }, {
           header: 'Jobs board - Rebecca Henderson - Logo Design - I can create the best premium logo for your business!',
           body: 'The professional logo design process is a rather serious business involving seven distinct stages, all with an aim to create a unique brand.',
           type: 'JOBS_BOARD',
           typeText: 'Jobs Board',
           imageURL: 'https://i.imgur.com/WVDBBwK.png',
-          logoURL: 'http://www.woodsandday.com.au/wp-content/uploads/2016/11/Female-Side-comb-O-neck-512.png'
+          logoURL: 'http://www.woodsandday.com.au/wp-content/uploads/2016/11/Female-Side-comb-O-neck-512.png',
+          reputationCount: 54
         }]
       }
     },
@@ -214,5 +225,19 @@
     padding: 10px 0 0;
     border-top: 1px solid #e6ecf5;
     min-height: 30px;
+    display: flex;
+
+    .post-reputation {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+    }
+
+    .heart-icon {
+      background-image: url('https://cdn4.iconfinder.com/data/icons/evil-icons-user-interface/64/heart-24.png');
+      width: 24px;
+      height: 24px;
+      margin-right: 5px;
+    }
   }
 </style>
