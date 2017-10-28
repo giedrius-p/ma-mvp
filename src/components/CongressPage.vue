@@ -19,7 +19,7 @@
         }, {
           title: 'Allocate 1,000,000 M.O.M. Tokens for Kick Off Business'
         }, {
-          title: 'UX Upgrade v2 for Feed Section'
+          title: 'UX Upgrade v1.1 for Feed Section'
         }, {
           title: 'Social Media Promotion Campaign'
         }, {
