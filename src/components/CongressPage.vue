@@ -15,21 +15,21 @@
     data () {
       return {
         proposals: [{
-          title: 'Proposal 1'
+          title: 'Moms Avenue Roadmap 2018'
         }, {
-          title: 'Proposal 2'
+          title: 'Allocate 1,000,000 M.O.M. Tokens for Kick Off Business'
         }, {
-          title: 'Proposal 3'
+          title: 'UX Upgrade for Feed Section'
         }, {
-          title: 'Proposal 4'
+          title: 'Social Media Promotion Campaign'
         }, {
-          title: 'Proposal 5'
+          title: 'WomenInTech Event Support'
         }, {
-          title: 'Proposal 6'
+          title: 'Automated location based Community Groups'
         }, {
-          title: 'Proposal 7'
+          title: 'Increase video content reward by 10%'
         }, {
-          title: 'Proposal 8'
+          title: 'Moms Avenue translation to German'
         }]
       }
     }

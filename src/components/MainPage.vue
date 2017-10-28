@@ -78,7 +78,16 @@
           imageURL: 'http://www.jobsite.co.uk/worklife/files/2016/01/sales-project-management-750x400.jpg',
           logoURL: 'http://www.woodsandday.com.au/wp-content/uploads/2016/11/Female-Side-comb-O-neck-512.png',
           reputationCount: 10
-        }, {
+        },{
+          header: 'Robotic School invites you to a free online course',
+          body: 'How to educate your little inventors? How can you dare to choose technology lessons for your leisure or even create your imagination if you have never tried to test it before? ',
+          type: 'COURSE',
+          typeText: 'Course',
+          imageURL: 'https://www.madeinvilnius.lt/wp-content/uploads/2017/10/10403277_1597424293915503_799840515197524884_n-600x300.jpg',
+          logoURL: 'http://www.iconninja.com/files/389/563/658/robot-expression-mechanical-space-robotic-launch-fun-robot-robot-technology-android-mascot-robot-chargers-metal-icon.svg',
+          reputationCount: 2357
+        },
+          {
           header: 'Liuti Store - Summer collection sale',
           body: 'Don\'t miss it. Up to 50% less.',
           type: 'MARKETPLACE',
