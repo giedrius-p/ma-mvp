@@ -7,21 +7,21 @@ import AchievementPage from '@/components/AchievementPage'
 Vue.use(Router)
 
 export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'Hello',
-      component: MainPage
-    },
-    {
-      path: '/congress',
-      name: 'Congress',
-      component: CongressPage
-    },
-    {
-      path: '/achievements',
-      name: 'Achievement',
-      component: AchievementPage
-    }
-  ]
+    routes: [
+        {
+            path: '/',
+            name: 'Hello',
+            component: MainPage
+        },
+        {
+            path: '/congress',
+            name: 'Congress',
+            component: CongressPage
+        },
+        {
+            path: '/achievements',
+            name: 'Achievement',
+            component: AchievementPage
+        }
+    ]
 })
