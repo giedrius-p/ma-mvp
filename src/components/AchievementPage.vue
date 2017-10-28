@@ -24,21 +24,29 @@
     data () {
       return {
         achievements: [{
-          iconURL: '',
-          title: 'Title 1',
-          description: 'Description 1',
-          progress: 75,
+          iconURL: 'https://image.ibb.co/cwgKFm/info5.png',
+          title: 'Moms Avenue Starter',
+          description: 'Congratulations! You have been in the Moms Avenue community for 1 month',
+          progress: 2,
           max: 100
-        }, {
-          iconURL: '',
-          title: 'Title 2',
-          description: 'Description 2',
+        },
+          {
+            iconURL: 'https://image.ibb.co/mT8Yam/badge2.png',
+            title: 'Moms Congress Member',
+            description: 'Congratulations! You are Member of Moms Congress.',
+            progress: 100,
+            max: 100
+          },
+          {
+          iconURL: 'https://image.ibb.co/cNrmvm/badge6.png',
+          title: 'Junior Creator',
+          description: 'You have collected 25 M.O.M. tokens from created articles! Keep going.',
           progress: 25,
           max: 100
         }, {
-          iconURL: '',
-          title: 'Title 3',
-          description: 'Description 3',
+          iconURL: 'https://image.ibb.co/jD7gT6/info1.png',
+          title: 'Sales Guru',
+          description: 'You have collected 550 M.O.M. tokens from sold items on Moms Avenue! Keep going.',
           progress: 50,
           max: 100
         }]
